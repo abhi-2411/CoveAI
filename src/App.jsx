@@ -1,9 +1,9 @@
 import React from "react";
-import CoveAI from "./Components/CoveAi";
-export default App = () => {
+import Home from "./Pages/Home";
+export default function App() {
   return (
     <div>
-      <CoveAI />
+      <Home />
     </div>
   );
-};
+}
