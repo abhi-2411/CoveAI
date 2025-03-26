@@ -25,23 +25,29 @@ const CoveAI = () => {
   return (
     <div className="coveai-container">
       <h1>CoveAI</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="ni" onSubmit={handleSubmit}>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           rows="5"
           cols="50"
           placeholder="Type your prompt here..."
+          className="input"
         />
         <br />
-        <button type="submit" disabled={loading}>
+        <button
+          className="button-35"
+          role="button"
+          type="submit"
+          disabled={loading}
+        >
           {loading ? "Loading..." : "Get Response"}
         </button>
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <div>
         <h2>Response:</h2>
-        <p>{response}</p>
+        <p className="response">{response}</p>
       </div>
     </div>
   );
